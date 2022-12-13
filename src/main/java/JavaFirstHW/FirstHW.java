@@ -13,9 +13,6 @@ package JavaFirstHW;
 
 
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public class FirstHW {
@@ -27,13 +24,12 @@ public class FirstHW {
         while (bufferedReader.ready()) {
             arrayList.add(bufferedReader.readLine());
         }
-        for (String s : arrayList) {
-            System.out.println(s);
-        }
-        int a = 3;
-        int b = 2;
+
+        int b = Integer.parseInt(arrayList.get(0).trim().substring(2));
+        int a = Integer.parseInt(arrayList.get(1).trim().substring(2));
         double deg = Math.pow(a, b);
         bufferedReader.close();
+        System.out.println(deg);
 
 
         File file = new File("output.txt");
@@ -46,6 +42,7 @@ public class FirstHW {
         }
     }
 }
+
 
 
 
